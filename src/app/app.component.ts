@@ -7,8 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-tutorial';
-  name = 'Roy';
+  firstName = 'Roy';
+  lastName = 'Rasley';
+  fontSizePx = 16;
 
-  
+  constructor(){
+    this.firstName
+    this.lastName
+  }
+
+  getFirstName() {
+    return this.firstName;
+  }
+
+  getLastName() {
+    return this.lastName;
+  }
 
 }

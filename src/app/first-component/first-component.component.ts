@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-first-component',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first-component.component.css']
 })
 export class FirstComponentComponent implements OnInit {
+  appComponent = new AppComponent;
+  firstName = this.appComponent.firstName
+  constructor() {
 
-  constructor() { }
-
+   }
+   
   ngOnInit(): void {
   }
 

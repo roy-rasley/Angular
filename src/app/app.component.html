@@ -1,14 +1,17 @@
 <div>
   <app-header></app-header>
   <h2>
-    Hello, {{name}}
+    Hello, {{firstName}}
   </h2>
   <nav>
     <a routerLink="firstComponent">First Page</a>
-    <br>
+    <span>|</span>
     <a routerLink="secondComponent">Second Page</a>
-
   </nav>
+  <div>
+    <app-sizer [(size)]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>
+    <div class= 'resizedText'[style.font-size.px]="fontSizePx">Resizable Text</div>
+  </div>
 
 </div>
 
