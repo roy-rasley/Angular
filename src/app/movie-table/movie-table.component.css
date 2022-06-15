@@ -1,0 +1,15 @@
+th{
+    border: 2px solid black;
+}
+
+tr.topRow{
+    border: 2px solid black;
+}
+
+tr.tableRow{
+border: 2px solid black !important;
+}
+
+td{
+    border: 2px solid black;
+}

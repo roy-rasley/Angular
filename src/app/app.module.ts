@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { SecondComponentComponent } from './second-component/second-component.component';
 import { SizerComponent } from './sizer/sizer.component';
+import { MovieTableComponent } from './movie-table/movie-table.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SizerComponent } from './sizer/sizer.component';
     HeaderComponent,
     FirstComponentComponent,
     SecondComponentComponent,
-    SizerComponent
+    SizerComponent,
+    MovieTableComponent
   ],
   imports: [
     BrowserModule,

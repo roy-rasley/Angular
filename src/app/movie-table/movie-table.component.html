@@ -1,0 +1,24 @@
+<div>{{title}}</div>
+
+<div class="table-responsive">
+    <table class = 'table table-bordered table-sm'>
+        <thead class = 'thead-dark'>
+            
+            <tr class = 'topRow'>
+                <th>Name</th>
+                <th>Universe</th>
+                <th>Power Level</th>
+                <th>Movie</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr class="tableRow" *ngFor="let superhero of superHeroes">
+                    <td>{{superhero.name}}</td>
+                    <td>{{superhero.universe}}</td>
+                    <td>{{superhero.powerLevel}}</td>
+                    <td>{{superhero.movie}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
