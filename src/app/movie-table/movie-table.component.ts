@@ -3,12 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-movie-table',
   templateUrl: './movie-table.component.html',
-  styleUrls: ['./movie-table.component.css']
+  styleUrls: ['./movie-table.component.css'],
+  template: `
+    <ng2-smart-table [settings]="settings" [source]="superHeroes"></ng2-smart-table>
+  `
 })
 
 
 
 export class MovieTableComponent implements OnInit {
+num: number = 0;
 title: string = 'Top 5 SuperHeros'
 hero1:SuperHero = new SuperHero('Goku','Dragon Ball','Multi-Versal','Dragon Ball Super')
 hero2:SuperHero = new SuperHero('Iron Man','Marvel','Island Level','Avengers')
@@ -16,10 +20,27 @@ hero3:SuperHero = new SuperHero('Scarlet Witch','Marvel','Reality Warper','Aveng
 hero4:SuperHero = new SuperHero('Sonic','Sonic','Multi-Versal','Sonic the HedgeHog')
 hero5:SuperHero = new SuperHero('Arceus','Pokemon','Multi-Versal','Arceus and the jewel of life')
 
+
 superHeroes: SuperHero[] = []
 
 
   constructor() { }
+  settings = {
+    columns: {
+      name: {
+        title: 'Name'
+      },
+      universe: {
+        title: 'Universe'
+      },
+      powerLevel: {
+        title: 'Power Level'
+      },
+      movie: {
+        title: 'Movie'
+      }
+    }
+  }; 
 
   ngOnInit(): void {
     this.superHeroes.push(this.hero1,this.hero2,this.hero3,this.hero4,this.hero5);
@@ -38,6 +59,8 @@ class SuperHero{
     this.powerLevel=powerLevel;
     this.movie = movie;
   }
+
+  
 }
 
 

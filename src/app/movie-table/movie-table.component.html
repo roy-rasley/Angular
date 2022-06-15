@@ -1,6 +1,7 @@
 <div>{{title}}</div>
 
-<div class="table-responsive">
+<ng2-smart-table [settings]="settings" [source]="superHeroes"></ng2-smart-table>
+<!-- <div class="table-responsive">
     <table class = 'table table-bordered table-sm'>
         <thead class = 'thead-dark'>
             
@@ -21,4 +22,13 @@
             </tr>
         </tbody>
     </table>
+</div> -->
+<input type="text" [(ngModel)] = 'num'/>
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="1"> {{superHeroes[0].name}},{{superHeroes[0].powerLevel}}</div>
+    <div *ngSwitchCase="2"> {{superHeroes[1].name}},{{superHeroes[1].powerLevel}}</div>
+    <div *ngSwitchCase="3"> {{superHeroes[2].name}},{{superHeroes[2].powerLevel}}</div>
+    <div *ngSwitchCase="4"> {{superHeroes[3].name}},{{superHeroes[3].powerLevel}}</div>
+    <div *ngSwitchDefault> Please Enter Display Case 1-4</div>
+    <div *ngIf="num==1">The best hero there is.</div>
 </div>
