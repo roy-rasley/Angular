@@ -13,3 +13,6 @@ border: 2px solid black !important;
 td{
     border: 2px solid black;
 } */
+*{
+    background-color: rgb(1, 7, 179);
+}

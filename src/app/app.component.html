@@ -1,7 +1,10 @@
 <div>
-  <app-header></app-header>
+  <div>{{date | date: 'fullDate'}}
+    <br>
+       {{time | date: 'shortTime'}} 
+  </div>
   <h2>
-    Hello, {{firstName}}
+    Hello, {{firstName| uppercase}}
   </h2>
   <nav>
     <a routerLink="firstComponent">First Page</a>

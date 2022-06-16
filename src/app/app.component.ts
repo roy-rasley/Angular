@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-tutorial';
-  firstName = 'Roy';
-  lastName = 'Rasley';
+  firstName:string = 'Roy';
+  lastName:string = 'Rasley';
   fontSizePx = 16;
+  date: Date = new Date();
+  time: Date = new Date();
+  
 
   constructor(){
     this.firstName
